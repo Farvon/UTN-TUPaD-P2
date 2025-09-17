@@ -24,7 +24,7 @@ public class Titular {
 
     public String getNumeroPasaporte() {
         if (pasaporte == null) {
-            return "No tiene titular asignado";
+            return "No tiene pasaporte asignado";
         }
         return pasaporte.getNumero();
     }
