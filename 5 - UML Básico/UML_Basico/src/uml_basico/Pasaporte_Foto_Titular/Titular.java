@@ -10,15 +10,35 @@ public class Titular {
         this.nombre = nombre;
         this.dni = dni;
     }
-    
-    public void setPasaporte(Pasaporte pasaporte){
+
+    public void setPasaporte(Pasaporte pasaporte) {
         this.pasaporte = pasaporte;
-        if(pasaporte != null && pasaporte.getTitular() != this){
+        if (pasaporte != null && pasaporte.getTitular() != this) {
             pasaporte.setTitular(this);
         }
     }
-    
-    public Pasaporte getPasaporte(){
+
+    public Pasaporte getPasaporte() {
         return this.pasaporte;
     }
+
+    public String getNumeroPasaporte() {
+        if (pasaporte == null) {
+            return "No tiene titular asignado";
+        }
+        return pasaporte.getNumero();
+    }
+
+    public String getNombre() {
+        if (pasaporte == null) {
+            return "No tiene titular asignado";
+        }
+        return this.nombre;
+    }
+
+    @Override
+    public String toString() {
+        return "Titular{" + "nombre=" + nombre + ", dni=" + dni + ", pasaporte=" + getNumeroPasaporte() + '}';
+    }
+
 }
