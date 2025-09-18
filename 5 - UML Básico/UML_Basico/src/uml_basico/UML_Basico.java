@@ -4,8 +4,8 @@ package uml_basico;
 import uml_basico.Pasaporte_Foto_Titular.*;
 import uml_basico.Celular_Bateria_Usuario.*;
 import uml_basico.Libro_Autor_Editorial.*;
-//import uml_basico.TarjetaDeCrédito_Cliente_Banco.*;
-//import uml_basico.Computadora_PlacaMadre_Propietario.*;
+import uml_basico.TarjetaDeCrédito_Cliente_Banco.*;
+import uml_basico.Computadora_PlacaMadre_Propietario.*;
 //import uml_basico.Reserva_Cliente_Mesa.*;
 //import uml_basico.Vehículo_Motor_Conductor.*;
 //import uml_basico.Documento_FirmaDigital_Usuario.*;
@@ -62,6 +62,17 @@ public class UML_Basico {
     }
 
     public static void TarjetaDeCrédito_Cliente_Banco() {
+
+        Cliente cliente = new Cliente("Facundo", "32324545");
+        Banco banco = new Banco("ICBC", "123333411");
+        TarjetaDeCredito tarjeta = new TarjetaDeCredito("1122", "12-12-22", banco);
+
+        System.out.println(tarjeta);
+        System.out.println(cliente);
+        tarjeta.setCliente(cliente);
+        System.out.println(tarjeta);
+        System.out.println(cliente);
+
     }
 
     public static void Computadora_PlacaMadre_Propietario() {
@@ -99,9 +110,9 @@ public class UML_Basico {
         //Pasaporte_Foto_Titular();
         //Celular_Bateria_Usuario();
         //Libro_Autor_Editorial();
-        TarjetaDeCrédito_Cliente_Banco();
-        /*Computadora_PlacaMadre_Propietario();
-        Reserva_Cliente_Mesa();
+        //TarjetaDeCrédito_Cliente_Banco();
+        Computadora_PlacaMadre_Propietario();
+        /*Reserva_Cliente_Mesa();
         Vehiculo_Motor_Conductor();
         Documento_FirmaDigital_Usuario();
         CitaMedica_Paciente_Profesional();
