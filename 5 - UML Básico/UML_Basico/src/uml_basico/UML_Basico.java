@@ -3,7 +3,7 @@ package uml_basico;
 /* IMPORTACIONES de clases -----  */
 import uml_basico.Pasaporte_Foto_Titular.*;
 import uml_basico.Celular_Bateria_Usuario.*;
-//import uml_basico.Libro_Autor_Editorial.*;
+import uml_basico.Libro_Autor_Editorial.*;
 //import uml_basico.TarjetaDeCrédito_Cliente_Banco.*;
 //import uml_basico.Computadora_PlacaMadre_Propietario.*;
 //import uml_basico.Reserva_Cliente_Mesa.*;
@@ -49,6 +49,16 @@ public class UML_Basico {
     }
 
     public static void Libro_Autor_Editorial() {
+
+        Autor autor = new Autor("Edgar Alan Poe", "Ingles");
+        Editorial editorial = new Editorial("Saturno", "Siempre vivas 123");
+        Libro libro = new Libro("Sherlock Holmes", "9801", editorial);
+        System.out.println(libro);
+        libro.mostrarAutor();
+        libro.setAutor(autor);
+        System.out.println(libro);
+        libro.mostrarAutor();
+
     }
 
     public static void TarjetaDeCrédito_Cliente_Banco() {
@@ -87,10 +97,10 @@ public class UML_Basico {
     public static void main(String[] args) {
 
         //Pasaporte_Foto_Titular();
-        Celular_Bateria_Usuario();
-        /*Libro_Autor_Editorial();
+        //Celular_Bateria_Usuario();
+        //Libro_Autor_Editorial();
         TarjetaDeCrédito_Cliente_Banco();
-        Computadora_PlacaMadre_Propietario();
+        /*Computadora_PlacaMadre_Propietario();
         Reserva_Cliente_Mesa();
         Vehiculo_Motor_Conductor();
         Documento_FirmaDigital_Usuario();
