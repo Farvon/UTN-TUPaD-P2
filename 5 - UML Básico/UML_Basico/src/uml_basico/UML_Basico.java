@@ -1,16 +1,16 @@
 package uml_basico;
 
-/* IMPORTACIONES de clases -----  */
+/* IMPORTACIONES de clases ---- Descomentar segun se necesite ------  */
 //import uml_basico.Pasaporte_Foto_Titular.*;
 //import uml_basico.Celular_Bateria_Usuario.*;
 //import uml_basico.Libro_Autor_Editorial.*;
-import uml_basico.TarjetaDeCrédito_Cliente_Banco.*;
+//import uml_basico.TarjetaDeCrédito_Cliente_Banco.*;
 //import uml_basico.Computadora_PlacaMadre_Propietario.*;
 //import uml_basico.Reserva_Cliente_Mesa.*;
 //import uml_basico.Vehículo_Motor_Conductor.*;
 //import uml_basico.Documento_FirmaDigital_Usuario.*;
 //import uml_basico.CitaMedica_Paciente_Profesional.*;
-//mport uml_basico.CuentaBancaria_ClaveSeguridad_Titular.*;
+//import uml_basico.CuentaBancaria_ClaveSeguridad_Titular.*;
 //import uml_basico.Reproductor_Cancion_Artista.*;
 //import uml_basico.Impuesto_Contribuyente_Calculadora.*;
 //import uml_basico.GeneradorQR_Usuario_CodigoQR.*;
@@ -19,8 +19,8 @@ import uml_basico.TarjetaDeCrédito_Cliente_Banco.*;
 /* ---------- */
 public class UML_Basico {
 
-    // Funciones para cada ejercicio ----- Descomentar segun se necesite ------
-    /*
+    /* Funciones para cada ejercicio ----- Descomentar segun se necesite ------ */
+ /*
     public static void Pasaporte_Foto_Titular() {
 
         Pasaporte pasaporte = new Pasaporte("321F", "15-2-25", "Foto Perfil", "png");
@@ -64,7 +64,7 @@ public class UML_Basico {
         libro.mostrarAutor();
 
     }
-     */
+   
     public static void TarjetaDeCrédito_Cliente_Banco() {
 
         Cliente cliente = new Cliente("Facundo", "32324545");
@@ -78,8 +78,7 @@ public class UML_Basico {
         System.out.println(cliente);
 
     }
-
-    /*
+    
     public static void Computadora_PlacaMadre_Propietario() {
 
         Computadora computadora = new Computadora("HP", "232425T", "A520M Pro", "Intel I5");
@@ -93,7 +92,7 @@ public class UML_Basico {
         System.out.println(propietario);
 
     }
-
+     
     public static void Reserva_Cliente_Mesa() {
 
         Cliente cliente = new Cliente("Pedro", "11225544");
@@ -108,7 +107,7 @@ public class UML_Basico {
         System.out.println(mesa);
 
     }
-
+    
     public static void Vehiculo_Motor_Conductor() {
 
         Motor v8 = new Motor("V8", "2222F");
@@ -123,7 +122,7 @@ public class UML_Basico {
         System.out.println(conductor);
 
     }
-
+     
     public static void Documento_FirmaDigital_Usuario() {
 
         Usuario usuario = new Usuario("Jaime", "jaimito@gmail.com");
@@ -132,7 +131,7 @@ public class UML_Basico {
         System.out.println(documento);
 
     }
-
+   
     public static void CitaMedica_Paciente_Profesional() {
 
         Profecional profecional = new Profecional("Dr. Ricardo", "Odontologo");
@@ -147,7 +146,7 @@ public class UML_Basico {
         System.out.println(citaMedica);
 
     }
-
+   
     public static void CuentaBancaria_ClaveSeguridad_Titular() {
 
         CuentaBancaria cuentaBancaria = new CuentaBancaria("11225454", 500.00, "1234", "20/9/2025");
@@ -161,7 +160,7 @@ public class UML_Basico {
         System.out.println(titular);
 
     }
-
+    
     public static void Reproductor_Cancion_Artista() {
         Cancion cancion = new Cancion("El final es en donde partí");
         Artista artista = new Artista("La Renga", "Rock Nacional");
@@ -174,7 +173,7 @@ public class UML_Basico {
         reproductor.reproducir(cancion);
 
     }
-
+    
     public static void Impuesto_Contribuyente_Calculadora() {
         Contribuyente contribuyente = new Contribuyente("Javier", "20-23232323-7");
         Impuesto impuesto = new Impuesto(700.00);
@@ -187,7 +186,7 @@ public class UML_Basico {
         System.out.println("Se utiliza calculadora");
         calculadora.calcular(impuesto);
     }
-
+    
     public static void GeneradorQR_Usuario_CodigoQR() {
         Usuario usuario = new Usuario("Facu", "farvon@gmail.com");
         GeneradorQR generadorQR = new GeneradorQR();
@@ -195,7 +194,7 @@ public class UML_Basico {
         generadorQR.generar("00101100", usuario);
 
     }
-
+    
     public static void EditorVideo_Proyecto_Render() {
         Proyecto proyecto = new Proyecto("Proyecto Final", 15.00);
         EditorVideo editorVideo = new EditorVideo();
@@ -203,14 +202,14 @@ public class UML_Basico {
         editorVideo.exportar("mp4", proyecto);
 
     }
-
      */
     public static void main(String[] args) {
 
+        /* Funciones para ejecutar cada ejercicio ----- Descomentar segun se necesite ------ */
         //saporte_Foto_Titular();
         //Celular_Bateria_Usuario();
         //Libro_Autor_Editorial();
-        TarjetaDeCrédito_Cliente_Banco();
+        //TarjetaDeCrédito_Cliente_Banco();
         //Computadora_PlacaMadre_Propietario();
         //Reserva_Cliente_Mesa();
         //Vehiculo_Motor_Conductor();
