@@ -1,13 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package uml_basico.GeneradorQR_Usuario_CodigoQR;
 
-/**
- *
- * @author farvo
- */
 public class GeneradorQR {
-    
+
+    private CodigoQR codigoQR;
+
+    public void generar(String valor, Usuario usuario) {
+        this.codigoQR = new CodigoQR(valor);
+        System.out.println("Se crea codigoQR: " + codigoQR);
+        this.codigoQR.setUsuario(usuario);
+        System.out.println("Se asocia usuario: " + codigoQR);
+    }
+
 }

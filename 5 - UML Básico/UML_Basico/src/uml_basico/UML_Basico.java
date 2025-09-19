@@ -4,21 +4,22 @@ package uml_basico;
 //import uml_basico.Pasaporte_Foto_Titular.*;
 //import uml_basico.Celular_Bateria_Usuario.*;
 //import uml_basico.Libro_Autor_Editorial.*;
-//import uml_basico.TarjetaDeCrédito_Cliente_Banco.*;
+import uml_basico.TarjetaDeCrédito_Cliente_Banco.*;
 //import uml_basico.Computadora_PlacaMadre_Propietario.*;
 //import uml_basico.Reserva_Cliente_Mesa.*;
-import uml_basico.Vehículo_Motor_Conductor.*;
-import uml_basico.Documento_FirmaDigital_Usuario.*;
-import uml_basico.CitaMedica_Paciente_Profesional.*;
-import uml_basico.CuentaBancaria_ClaveSeguridad_Titular.*;
-import uml_basico.Reproductor_Cancion_Artista.*;
-import uml_basico.Impuesto_Contribuyente_Calculadora.*;
+//import uml_basico.Vehículo_Motor_Conductor.*;
+//import uml_basico.Documento_FirmaDigital_Usuario.*;
+//import uml_basico.CitaMedica_Paciente_Profesional.*;
+//mport uml_basico.CuentaBancaria_ClaveSeguridad_Titular.*;
+//import uml_basico.Reproductor_Cancion_Artista.*;
+//import uml_basico.Impuesto_Contribuyente_Calculadora.*;
 //import uml_basico.GeneradorQR_Usuario_CodigoQR.*;
-import uml_basico.EditorVideo_Proyecto_Render.*;
+//import uml_basico.EditorVideo_Proyecto_Render.*;
 
 /* ---------- */
 public class UML_Basico {
 
+    // Funciones para cada ejercicio ----- Descomentar segun se necesite ------
     /*
     public static void Pasaporte_Foto_Titular() {
 
@@ -35,6 +36,7 @@ public class UML_Basico {
 
     }
 
+     
     public static void Celular_Bateria_Usuario() {
         Bateria bateria = new Bateria("AJ32", 50);
         Celular celular = new Celular("imei123", "Motorola", "G20", bateria); //Paso Bateria como parámetro
@@ -49,7 +51,7 @@ public class UML_Basico {
         System.out.println(facu);
 
     }
-
+     
     public static void Libro_Autor_Editorial() {
 
         Autor autor = new Autor("Edgar Alan Poe", "Ingles");
@@ -62,7 +64,7 @@ public class UML_Basico {
         libro.mostrarAutor();
 
     }
-
+     */
     public static void TarjetaDeCrédito_Cliente_Banco() {
 
         Cliente cliente = new Cliente("Facundo", "32324545");
@@ -77,6 +79,7 @@ public class UML_Basico {
 
     }
 
+    /*
     public static void Computadora_PlacaMadre_Propietario() {
 
         Computadora computadora = new Computadora("HP", "232425T", "A520M Pro", "Intel I5");
@@ -105,7 +108,7 @@ public class UML_Basico {
         System.out.println(mesa);
 
     }
-     */
+
     public static void Vehiculo_Motor_Conductor() {
 
         Motor v8 = new Motor("V8", "2222F");
@@ -160,34 +163,64 @@ public class UML_Basico {
     }
 
     public static void Reproductor_Cancion_Artista() {
+        Cancion cancion = new Cancion("El final es en donde partí");
+        Artista artista = new Artista("La Renga", "Rock Nacional");
+        Reproductor reproductor = new Reproductor();
+
+        System.out.println(cancion);
+        System.out.println("Se asocia artista a cancion");
+        cancion.setArtista(artista);
+        System.out.println("Se repoduce desde reproductor");
+        reproductor.reproducir(cancion);
+
     }
 
     public static void Impuesto_Contribuyente_Calculadora() {
+        Contribuyente contribuyente = new Contribuyente("Javier", "20-23232323-7");
+        Impuesto impuesto = new Impuesto(700.00);
+        Calculadora calculadora = new Calculadora();
+
+        System.out.println(impuesto);
+        System.out.println("Se asocia contibuyente a impuesto");
+        impuesto.setContribuyente(contribuyente);
+        System.out.println(impuesto);
+        System.out.println("Se utiliza calculadora");
+        calculadora.calcular(impuesto);
     }
 
     public static void GeneradorQR_Usuario_CodigoQR() {
+        Usuario usuario = new Usuario("Facu", "farvon@gmail.com");
+        GeneradorQR generadorQR = new GeneradorQR();
+
+        generadorQR.generar("00101100", usuario);
+
     }
 
     public static void EditorVideo_Proyecto_Render() {
+        Proyecto proyecto = new Proyecto("Proyecto Final", 15.00);
+        EditorVideo editorVideo = new EditorVideo();
+
+        editorVideo.exportar("mp4", proyecto);
+
     }
 
+     */
     public static void main(String[] args) {
 
-        //Pasaporte_Foto_Titular();
+        //saporte_Foto_Titular();
         //Celular_Bateria_Usuario();
         //Libro_Autor_Editorial();
-        //TarjetaDeCrédito_Cliente_Banco();
+        TarjetaDeCrédito_Cliente_Banco();
         //Computadora_PlacaMadre_Propietario();
         //Reserva_Cliente_Mesa();
         //Vehiculo_Motor_Conductor();
         //Documento_FirmaDigital_Usuario();
         //CitaMedica_Paciente_Profesional();
         //CuentaBancaria_ClaveSeguridad_Titular();
-        Reproductor_Cancion_Artista();
-        /*Impuesto_Contribuyente_Calculadora();
-        GeneradorQR_Usuario_CodigoQR();
-        EditorVideo_Proyecto_Render();
-         */
+        //Reproductor_Cancion_Artista();
+        //Impuesto_Contribuyente_Calculadora();
+        //GeneradorQR_Usuario_CodigoQR();
+        //EditorVideo_Proyecto_Render();
     }
 
 }

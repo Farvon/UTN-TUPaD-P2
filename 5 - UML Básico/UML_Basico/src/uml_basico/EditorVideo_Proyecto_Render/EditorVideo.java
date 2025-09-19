@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package uml_basico.EditorVideo_Proyecto_Render;
 
-/**
- *
- * @author farvo
- */
 public class EditorVideo {
-    
+
+    Render render;
+
+    public void exportar(String formato, Proyecto proyecto) {
+        this.render = new Render(formato);
+        System.out.println("Genero el render");
+        System.out.println(render);
+        System.out.println("Asocio el proyecto al render");
+        render.setProyecto(proyecto);
+        System.out.println(render);
+    }
+
 }
