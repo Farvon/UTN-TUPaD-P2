@@ -95,7 +95,7 @@ public class Inventario {
 
     public void mostrarCategoriasDisponibles() {
         for (Producto producto : productos) {
-            System.out.println(producto.getNombre() + " - " + producto.getCategoria().getDescripcion());
+            System.out.println(producto.getCategoria() + " - " + producto.getCategoria().getDescripcion());
         }
     }
 
