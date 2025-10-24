@@ -1,11 +1,11 @@
-package tp8.interfaces.y.excepciones;
+package interfaces;
 
-public class Paypal implements PagoConDescuento {
+public class PayPal implements PagoConDescuento {
 
     private String email;
-    private static final double DESCUENTO_PERCENTAJE = 10;
+    private static final double DESCUENTO_PERCENTAJE = 0.10;
 
-    public Paypal(String email) {
+    public PayPal(String email) {
         this.email = email;
     }
 
@@ -18,7 +18,7 @@ public class Paypal implements PagoConDescuento {
     @Override
     public double aplicarDescuento(double total) {
         double descuento = total * DESCUENTO_PERCENTAJE;
-        System.out.println("Descuento de PayPal (" + DESCUENTO_PERCENTAJE + "%) aplicado: $" + descuento);
+        System.out.println("Descuento de PayPal (" + (int) (DESCUENTO_PERCENTAJE * 100) + "%) aplicado: $" + Math.round(descuento));
         return descuento;
     }
 

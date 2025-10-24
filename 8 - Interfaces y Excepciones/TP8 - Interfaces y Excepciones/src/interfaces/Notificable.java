@@ -1,4 +1,4 @@
-package tp8.interfaces.y.excepciones;
+package interfaces;
 
 public interface Notificable {
 

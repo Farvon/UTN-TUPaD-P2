@@ -1,10 +1,8 @@
-package tp8.interfaces.y.excepciones;
+package interfaces;
 
 public enum EstadoPedido {
-
     PENDIENTE,
     PROCESANDO,
     REALIZADO,
     CANCELADO,
-
 }

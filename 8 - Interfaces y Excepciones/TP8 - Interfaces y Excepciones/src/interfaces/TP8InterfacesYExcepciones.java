@@ -1,16 +1,16 @@
-package tp8.interfaces.y.excepciones;
+package interfaces;
 
 public class TP8InterfacesYExcepciones {
 
     public static void main(String[] args) {
 
-        Cliente juan = new Cliente("Juan Pérez");
-        Pedido pedido1 = new Pedido(juan);
+        Cliente facu = new Cliente("Facundo");
+        Pedido pedido1 = new Pedido(facu);
 
-        pedido1.agregarProducto(new Producto("Laptop", 1200.00));
-        pedido1.agregarProducto(new Producto("Mouse", 25.00));
-        pedido1.agregarProducto(new Producto("Laptop", 1200.00));
-        pedido1.agregarProducto(new Producto("Mouse", 25.00));
+        pedido1.agregarProducto(new Producto("Notebook", 1200));
+        pedido1.agregarProducto(new Producto("Teclado", 250));
+        pedido1.agregarProducto(new Producto("Monitor", 120));
+        pedido1.agregarProducto(new Producto("Parlantes", 756));
 
         pedido1.listarProductos();
 
@@ -19,18 +19,34 @@ public class TP8InterfacesYExcepciones {
 
         System.out.println("----------------------------------------");
 
-        Paypal pagoPayPal = new Paypal("juan@ejemplo.com");
-        double descuento = pagoPayPal.aplicarDescuento(totalBruto);
-        double totalNeto = totalBruto - descuento;
+        TarjetaCredito tarjeta = new TarjetaCredito("1234-5678-1234-5678");
+        System.out.println("Se realiza el pago con Tarjeta de Credito");
 
-        System.out.println("Total Neto a pagar: $" + totalNeto);
-        if (pagoPayPal.procesarPago(totalNeto)) {
-            // 5. Notificar cambio de estado
-            pedido1.cambiarEstado(EstadoPedido.PROCESANDO);
-
-            // Simular otro cambio de estado
+        // Notifica cambio de estados
+        pedido1.cambiarEstado(EstadoPedido.PROCESANDO);
+        if (tarjeta.procesarPago(totalBruto)) {
+            // Notifica cambio de estados
             pedido1.cambiarEstado(EstadoPedido.REALIZADO);
         } else {
+            // Notifica cambio de estados
+            pedido1.cambiarEstado(EstadoPedido.CANCELADO);
+            System.out.println("El pago falló.");
+        }
+
+        System.out.println("Se intenta realizar el pago con Paypal aprovechando el descuento");
+        PayPal pagoPayPal = new PayPal("facu@gmail.com.es");
+        double descuento = pagoPayPal.aplicarDescuento(totalBruto);
+        double totalNeto = totalBruto - descuento;
+        System.out.println("Total Neto a pagar: $" + totalNeto);
+        // Notifica cambio de estado
+        pedido1.cambiarEstado(EstadoPedido.PROCESANDO);
+
+        if (pagoPayPal.procesarPago(totalNeto)) {
+            // Notifica cambio de estado
+            pedido1.cambiarEstado(EstadoPedido.REALIZADO);
+        } else {
+            // Notifica cambio de estado
+            pedido1.cambiarEstado(EstadoPedido.CANCELADO);
             System.out.println("El pago falló.");
         }
     }

@@ -1,4 +1,4 @@
-package tp8.interfaces.y.excepciones;
+package interfaces;
 
 public class TarjetaCredito implements Pago {
 
@@ -10,8 +10,9 @@ public class TarjetaCredito implements Pago {
 
     @Override
     public boolean procesarPago(double monto) {
-        System.out.println("Se realizó el pago de $" + monto + " de manera exitosa con tarjeta de credito");
-        return true;
+        //Simula error
+        System.out.println("No se realizó el pago de $" + monto + ". Error en sistema.");
+        return false;
     }
 
 }
